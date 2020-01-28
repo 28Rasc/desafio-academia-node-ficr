@@ -1,0 +1,11 @@
+{
+  "name": "desafio-academia-node-ficr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/28Rasc/desafio-academia-node-ficr.git",
+  "author": "Raul Cavalcanti <28rasc@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
