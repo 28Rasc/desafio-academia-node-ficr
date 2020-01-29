@@ -1,5 +1,4 @@
 # Roteiro
-- [ ] Iniciar documentandação.
 - [ ] Criação das rotas.
 - [ ] Prover em -> GET  /api/curriculo.
 - [ ] Tratamento das rotas não especificadas, retornar error 404. (tratado)
