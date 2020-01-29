@@ -4,6 +4,7 @@
 - [ ] Prover em -> GET  /api/curriculo.
 - [ ] Tratamento das rotas não especificadas, retornar error 404. (tratado)
 - [ ] Consumir dados das APIs GIT/Facebook especificados. (possivel npm packege)
+- [ ] Persistencia dos dados.
 - [ ] Definir padrão de retorno para a view. (possivel npm packege)
 - [ ] Desenvolver Front-end.
 - [ ] Consumir API pelo Front-end.
