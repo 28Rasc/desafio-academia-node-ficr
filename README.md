@@ -22,6 +22,8 @@ Neste desafio você deverá desenvolver uma api que retorna um currículo dinâm
 
 * Utilizar ferramentas de qualidade de código: [Eslint](https://www.npmjs.com/package/eslint) e [EditorConfig](https://editorconfig.org/)
 
+* Implementar as requisições aos serviços em paralelo, visto que um serviço não depende do outro
+
 * Sinta-se livre para adicionar features ao seu gosto. Exemplo: tradução do conteúdo utilizando flags na requisição, como mostrado abaixo.
 
 ````http
@@ -40,21 +42,47 @@ Neste desafio você deverá desenvolver uma api que retorna um currículo dinâm
 
 ````json
   {
-    "facebook_profile": {
-      "image": "https://imagem-do-perfil",
-      "name": "Fulano",
-      "surname": "Silva",
-      "Address": "Rua fulano de tal, 256 - Pe",
-      "gender": "Masculino",
-      "birthday": "12/12/1994",
-      "email": "fulano@gmail.com"
-    },
-    "github_profile": {
-      "name": "Fulano da Silva",
-      "html_url": "https://github.com/fulano",
-      "bio": "Fullstack Developer and Mobile Developer",
-      "company": "@Accenture",
-      "repositories": [
+    "nome": "Fulano Silva",
+    "data_nascimento": "12/12/1994",
+    "endereco": "Rua fulano de tal, 256 - Pe",
+    "email": "fulano@gmail.com",
+    "genero": "Masculino",
+    "bio": "Full Stack developer and Mobile developer",
+    "foto": "https://imagem-do-perfil",
+    "formacao": [
+      {
+        "instituicao": "ficr",
+        "curso": "ADS",
+        "inicio": "12/12/2014",
+        "termino": "01/04/2020"
+      }
+    ],
+    "experiencia_profissional": [
+      {
+        "empresa": "Accenture",
+        "funcao": "Engenheiro de Software",
+        "atividade": "Desenvolver api de integraçoes com servicos externos",
+        "inicio": "12/12/2014",
+        "termino": "atual"
+      },
+      {
+        "empresa": "Ficr",
+        "funcao": "Engenheiro de Software",
+        "atividade": "Desenvolver api de integraçoes com servicos externos",
+        "inicio": "12/12/2014",
+        "termino": "atual"
+      },
+      {
+        "empresa": "Google",
+        "funcao": "Engenheiro de Software",
+        "atividade": "Desenvolver api de integraçoes com servicos externos",
+        "inicio": "12/12/2014",
+        "termino": "atual"
+      }
+    ],
+    "github": {
+      "perfil": "https://github.com/fulano",
+      "alguns_repositorios": [
         {
           "size": 49,
           "name": "academia-nodejs-ficr",
