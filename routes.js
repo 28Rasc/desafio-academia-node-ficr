@@ -1,10 +1,7 @@
 import {Router} from 'express'
-
+import getAPI from './src/controller/dataController'
 const routes = Router()
 
-routes.get('/', ( req, res ) => {
-    
-    res.send('Funfando')
-})
+routes.get('/', getAPI)
 
 module.exports = routes

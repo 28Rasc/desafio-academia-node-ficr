@@ -1,2 +1,5 @@
 node_modules
 .env
+LIST.md 
+.gitpod.Dockerfile
+.gitpod.yml
