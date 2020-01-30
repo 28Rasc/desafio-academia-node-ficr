@@ -16,6 +16,6 @@
 - [ ] Testes.
 - [ ] Utilizar ferramentas de qualidade de código: Eslint e EditorConfig.
 
-### Possiveis Features
+### Possíveis Features
 - [ ] Tradução para outros idiomas.
 - [ ] Botão acessibilidade. (Dislexia)
