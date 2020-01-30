@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "nodemon src/app.js",
-    "dev2": "nodemon src/fb.js"
+    "dev2": "nodemon src/controller/dataController.js"
   },
   "dependencies": {
     "axios": "^0.19.2",

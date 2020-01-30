@@ -4,6 +4,6 @@
     ],
     "ext": "js",
     "execMap": {
-        "js": "sucrase-node src/app.js"
+        "js": "node -r sucrase/register"
     }
 }
