@@ -9,10 +9,12 @@ const getAPI = async ( req, res) => {
             "Authorization": `${process.env.GIT_TOKEN}`
         }
 
+        const url = `https://api.github.com/users/${github_username}`
+
     try {
         
-        const url = `https://api.github.com/users/${github_username}`
-        
+        const fbAPI = await axios.get(`${process.env.FB_URL}${process.env.FB_TOKEN}`)
+
         const gitAPI = await axios.get(`${url}`,{
             method: "GET",
             headers: headers,
@@ -22,7 +24,7 @@ const getAPI = async ( req, res) => {
             method: "GET",
             headers: headers,
         });
-        
+        const {} = fbAPI.data //////
         const { name = login, html_url, bio, company, repos_url } = gitAPI.data;
         const repos = repoResponse.data
         
