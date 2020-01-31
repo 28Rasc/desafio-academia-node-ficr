@@ -10,6 +10,7 @@
     "nodemon": "^2.0.2"
   },
   "scripts": {
+    "start": "node -r sucrase/register src/app.js",
     "dev": "nodemon src/app.js",
     "dev2": "nodemon src/controller/dataController.js"
   },
