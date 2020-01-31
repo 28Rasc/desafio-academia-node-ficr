@@ -1,11 +1,10 @@
-const {Router} = require('express')
+const { Router } = require('express')
 const getAPI = require('./controller/dataController')
+const anyRouteNotFound = require('./middlewares/anyRouteNotFound')
 const routes = Router()
 
 routes.get('/api/curriculo', getAPI)
 
-routes.get('*', function(req, res, next) {
-  res.status(404).send('<img src=https://http.cat/[status_code]>');
-});
+routes.use(anyRouteNotFound)
 
 module.exports = routes
