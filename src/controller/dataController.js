@@ -1,5 +1,5 @@
 require('dotenv').config();
-import axios from 'axios'
+const axios = require('axios')
 
 
 const getAPIs = async ( req, res) => {
@@ -56,27 +56,29 @@ const getAPIs = async ( req, res) => {
                 "termino": "2016"
             },
             ],
-             "github": {
-      "perfil": "https://github.com/fulano",
-      "alguns_repositorios": [
-        {
-          "size": repos[0].size,
-          "name": repos[0].name,
-          "url": repos[0].url
-        },
-        {
-          "size": repos[6].size,
-          "name":  repos[6].name,
-          "url": repos[6].url
-        },
-        {
-          "size": repos[5].size,
-          "name": repos[5].name,
-          "url": repos[5].url
+            "github": {
+
+
+            "perfil": html_url,
+            "alguns_repositorios": [
+            {
+            "size": repos[0].size,
+            "name": repos[0].name,
+            "url": repos[0].url
+            },
+            {
+            "size": repos[6].size,
+            "name":  repos[6].name,
+            "url": repos[6].url
+            },
+            {
+            "size": repos[5].size,
+            "name": repos[5].name,
+            "url": repos[5].url
+            }
+        ]
         }
-      ]
-    }
-        }
+            }
 
         return res.json(schema)
 

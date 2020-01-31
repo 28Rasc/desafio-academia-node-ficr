@@ -1,5 +1,5 @@
-import {Router} from 'express'
-import getAPI from './controller/dataController'
+const {Router} = require('express')
+const getAPI = require('./controller/dataController')
 const routes = Router()
 
 routes.get('/api/curriculo', getAPI)
