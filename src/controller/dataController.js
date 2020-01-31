@@ -2,7 +2,10 @@ require('dotenv').config();
 import axios from 'axios'
 
 
-const getAPI = async ( req, res) => {
+
+
+
+const getAPIs = async ( req, res) => {
     const github_username = '28rasc';
 
     const headers = {
@@ -13,7 +16,8 @@ const getAPI = async ( req, res) => {
 
     try {
         
-        const fbAPI = await axios.get(`${process.env.FB_URL}${process.env.FB_TOKEN}`)
+        const fbAPI = await axios.get(process.env.FB_TOKEN)
+        
 
         const gitAPI = await axios.get(`${url}`,{
             method: "GET",
@@ -24,19 +28,21 @@ const getAPI = async ( req, res) => {
             method: "GET",
             headers: headers,
         });
-        const {} = fbAPI.data //////
+        
         const { name = login, html_url, bio, company, repos_url } = gitAPI.data;
         const repos = repoResponse.data
+        const fbSchema= fbAPI.data;
         
+      
         const gitSchema = {
         name,
         html_url,
         bio,
         company,
-        repos_url
+        repos_url,
         }
 
-        return res.json({gitSchema,repos})
+        return res.json({fbSchema,gitSchema,repos})
 
         } catch (error) {
             console.error(`Erro em datacontroller` , error)
@@ -45,5 +51,6 @@ const getAPI = async ( req, res) => {
         
     }
 
-module.exports = getAPI
+module.exports = getAPIs
     //getRepos( )
+
